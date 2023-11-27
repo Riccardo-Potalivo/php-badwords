@@ -10,7 +10,11 @@
 <body>
 
     <main>
-
+        <form action="form.php" method="GET">
+            <input type="text" name="paragraph">
+            <input type="text" name="hide">
+            <button type="submit">Invia</button>
+        </form>
     </main>
 
 </body>
