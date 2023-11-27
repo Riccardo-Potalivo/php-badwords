@@ -3,6 +3,8 @@ $paragraph = $_GET["paragraph"];
 $hide = $_GET["hide"];
 
 $blurredParagraph = str_replace($hide, '***', $paragraph);
+$lengthParagraph = strlen($paragraph);
+$lengthBlurredParagraph = strlen($blurredParagraph);
 ?>
 
 <!DOCTYPE html>
@@ -18,17 +20,25 @@ $blurredParagraph = str_replace($hide, '***', $paragraph);
 
     <main>
         <div>
+            paragraph:
             <?php echo $paragraph; ?>
-
         </div>
         <div>
-            <?php echo $blurredParagraph; ?>
-
+            paragraph length:
+            <?php echo $lengthParagraph; ?>
         </div>
-        <!-- <div>
+        <div>
+            blurredParagraph:
+            <?php echo $blurredParagraph; ?>
+        </div>
+        <div>
+            blurred paragraph length:
+            <?php echo $lengthBlurredParagraph; ?>
+        </div>
+        <div>
+            blurred word:
             <?php echo $hide; ?>
-
-        </div> -->
+        </div>
     </main>
 
 </body>
